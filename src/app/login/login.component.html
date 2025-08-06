@@ -1,0 +1,28 @@
+<div
+      class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
+            <h4 class="text-center mb-4">Login</h4>
+            <form #loginForm="ngForm" (ngSubmit)="submit()">
+                  <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email"
+                              placeholder="name@example.com"
+                               name="email" [(ngModel)]="login.email"
+                              required>
+                        <label for="email">Email address</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                        <input type="password" class="form-control"
+                              id="password" placeholder="Password"
+                              
+                              [(ngModel)]="login.password" name="password" required>
+                        <label for="password">Password</label>
+                  </div>
+
+                  <div class="d-grid">
+                        <button type="submit" class="btn btn-primary py-2"
+                              [disabled]="loginForm.invalid">Login</button>
+                  </div>
+            </form>
+      </div>
+</div>
